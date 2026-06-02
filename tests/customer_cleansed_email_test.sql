@@ -1,0 +1,1 @@
+select * from {{ref('customer_cleansed' )}} where email not like '%@%'
