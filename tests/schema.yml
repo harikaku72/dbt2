@@ -9,4 +9,12 @@ models:
       - name: email
         tests:
           - not_null
-            
+  - name: order_cleansed
+    columns:
+      - name: customer_id
+        tests:
+          - relationships:
+             arguments:
+              field: customer_id
+              to: source('raw','customers')
+      
